@@ -15,9 +15,9 @@ def input_student_info():
         name = input("Name: ")
 
         dob_str = input("DOB (dd/mm/yyyy): ")
-        d, m, y = dob.split("/")
-        dob = (int d, int m, int y)
-        students.append("id": id, "name": name, "dob": dob)
+        d, m, y = dob_str.split("/")
+        dob = (d, m, y)
+        students.append({"id": id, "name": name, "dob": dob})
 
 # 2. List students
 def list_students():
@@ -28,7 +28,7 @@ def list_students():
     print("\n<List of students>\n")
     for s in students:
         d, m, y = s["dob"]
-        print(f"ID: {s["id"]}, Name: {s["name"]}, DOB: {d:02d}/{m:02d}/{y}")
+        print(f"ID: {s["id"]}, Name: {s["name"]}, DOB: {d}/{m}/{y}\n")
 
 # 3. Input course information
 def input_course_info():
@@ -69,7 +69,7 @@ def list_courses():
     
     print("\n<List of courses>\n")
     for c in courses:
-        print(f"ID: {courses["id"]}, Name: {courses["names"]}")
+        print(f"ID: {c["id"]}, Name: {c["name"]}\n")
         
 
 # 6. Show mark 
