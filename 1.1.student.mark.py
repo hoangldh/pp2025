@@ -37,6 +37,7 @@ def input_marks():
     
     list_courses()
     choice = input("Enter course ID: ")
+
     if choice not in marks:
         marks[choice] = {}
     for s in students:
